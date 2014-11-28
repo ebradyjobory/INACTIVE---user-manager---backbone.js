@@ -1,12 +1,13 @@
-var Router = Backbone.Router.extend({
-  routes: {
-    '': 'home'
-  }
-});
+// var Router = Backbone.Router.extend({
+//   // Router take an object routes
+//   routes: {
+//     '/home': 'home'
+//   }
+// });
 
-var router = new Router();
-router.on('route:home', function(){
-  console.log('we loaded the home page');
-});
+// var router = new Router();
 
-Backbone.history.start();
+// router.on('route:home', function(){
+//   UserListViews.render();
+// });
+

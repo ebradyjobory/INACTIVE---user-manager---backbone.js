@@ -3,30 +3,29 @@
 <head>
   <meta charset="utf-8">
   <title>User Manager</title>
-  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+  
   <script src="client/router/router.js"></script>
-
-
+  <script src="client/views/UserListViews.js"></script>
 
 </head>
 
 <body>
-
   <div class="container">
-    <h1>User Manager</h1>
+    <h1>User Management System</h1>
     <div class="page"></div>
   </div>
-
-  
-
-  <script>
-
-
-
-
-  </script>
+  <!-- ***************************** -->
+<script>
+      $(function(){
+        // build a view for the top level of the whole app
+        var appView = new UserListViews();
+        // put the view onto the screen
+        $('body').append(appView.render());
+      });
+    </script>
 </body>
 </html>
