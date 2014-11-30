@@ -10,22 +10,38 @@
   
   <script src="client/router/router.js"></script>
   <script src="client/views/UserListViews.js"></script>
+  <script src="client/collections/Users.js"></script>
 
 </head>
-
+<!-- <table>
+     <thead>
+       <tr>
+         <th>Name</th>
+         <th>Location</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+     </tbody>
+   </table> -->
 <body>
   <div class="container">
     <h1>User Management System</h1>
-    <div class="page"></div>
+    <div class="main"></div>
   </div>
   <!-- ***************************** -->
-<script>
-      $(function(){
-        // build a view for the top level of the whole app
-        var appView = new UserListViews();
-        // put the view onto the screen
-        $('body').append(appView.render());
-      });
-    </script>
+  <script type="text/template" id="usersTable">
+   template <%= users %>
+
+  </script>
+  <script>
+    $(function(){
+      // build a view for the top level of the whole app
+      var appView = new UserListViews();
+      // put the view onto the screen
+      $('body').append(appView.render());
+    });
+  </script>
+
 </body>
 </html>
